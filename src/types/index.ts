@@ -15,7 +15,6 @@ export interface User {
   classGroup?: string;
 }
 
-// Class and Academic types
 export interface ClassGroup {
   id: string;
   code: string;
@@ -83,17 +82,6 @@ export interface Document {
   studentName?: string;
 }
 
-export interface CalendarEvent {
-  id: string;
-  title: string;
-  date: string;
-  time: string;
-  type: 'academic' | 'personal' | 'deadline' | 'immigration' | 'orientation' | 'meeting';
-  location?: string;
-  studentId?: string;
-  studentName?: string;
-}
-
 export interface Notification {
   id: string;
   title: string;
@@ -104,7 +92,6 @@ export interface Notification {
   userId?: string;
 }
 
-// Student and Financial types
 export interface Student {
   id: string;
   name: string;
@@ -122,18 +109,6 @@ export interface Student {
   classGroup?: string;
 }
 
-export interface FinancialAid {
-  id: string;
-  studentId: string;
-  studentName: string;
-  type: 'scholarship' | 'grant' | 'loan' | 'work_study';
-  amount: number;
-  status: 'active' | 'pending' | 'completed' | 'cancelled';
-  semester: string;
-  description: string;
-  disbursementDate?: string;
-}
-
 export interface VisaStatus {
   id: string;
   studentId: string;
@@ -146,34 +121,4 @@ export interface VisaStatus {
   workAuthorization: string;
 }
 
-// Lab types for Gunadarma system
-export interface LabInfo {
-  id: string;
-  name: string;
-  code: string;
-  type: 'computer' | 'language' | 'science' | 'engineering';
-  capacity: number;
-  location: string;
-  equipment: string[];
-  status: 'available' | 'occupied' | 'maintenance';
-  supervisor: string;
-  operatingHours: {
-    start: string;
-    end: string;
-  };
-}
-
-export interface LabSchedule {
-  id: string;
-  labId: string;
-  subject: string;
-  classGroup: string;
-  day: 'Monday' | 'Tuesday' | 'Wednesday' | 'Thursday' | 'Friday' | 'Saturday';
-  startTime: string;
-  endTime: string;
-  instructor: string;
-  activity: string;
-}
-
-// Dummy export to ensure module is not empty at runtime
 export const DUMMY_EXPORT = true;

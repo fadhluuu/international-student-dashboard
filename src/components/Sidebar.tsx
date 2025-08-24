@@ -2,17 +2,14 @@ import React from 'react';
 import { 
   LayoutDashboard, 
   BookOpen, 
-  FileText, 
-  Calendar, 
+  FileText,
   User, 
   HelpCircle,
-  Settings,
   GraduationCap,
   Users,
   Globe,
   Shield,
   BarChart3,
-  UserCheck,
   Award
 } from 'lucide-react';
 import type { User as UserType } from '@/types';
