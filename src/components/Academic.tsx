@@ -76,7 +76,7 @@ const Academic: React.FC<AcademicProps> = ({ user }) => {
   const [showExamModal, setShowExamModal] = useState(false);
   const [selectedExamType, setSelectedExamType] = useState<'UTS' | 'UAS' | 'Ujian Utama' | null>(null);
 
-  // KRS data for all semesters
+  // data krs
   const allKrsData: Record<string, KRSItem[]> = {
     '1': [
       {
@@ -266,7 +266,7 @@ const Academic: React.FC<AcademicProps> = ({ user }) => {
     ]
   };
 
-  // Get current KRS items based on selected semester
+  // get krs
   const currentKrsItems = allKrsData[selectedSemester] || [];
 
   const grades: Grade[] = [
@@ -276,7 +276,7 @@ const Academic: React.FC<AcademicProps> = ({ user }) => {
       courseName: 'Database Systems',
       credits: 3,
       grade: 'A',
-      gradePoints: 4.0, // 4.0 per credit
+      gradePoints: 4.0, 
       semester: 'Semester 6'
     },
     {
@@ -285,7 +285,7 @@ const Academic: React.FC<AcademicProps> = ({ user }) => {
       courseName: 'Web Programming',
       credits: 3,
       grade: 'A-',
-      gradePoints: 3.7, // 3.7 per credit
+      gradePoints: 3.7,
       semester: 'Semester 6'
     },
     {
@@ -294,7 +294,7 @@ const Academic: React.FC<AcademicProps> = ({ user }) => {
       courseName: 'Statistics',
       credits: 2,
       grade: 'B+',
-      gradePoints: 3.3, // 3.3 per credit
+      gradePoints: 3.3,
       semester: 'Semester 6'
     }
   ];

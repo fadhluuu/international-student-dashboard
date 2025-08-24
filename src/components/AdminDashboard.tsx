@@ -54,7 +54,7 @@ const AdminDashboard: React.FC<AdminDashboardProps> = ({ user, announcements, on
     priority: 'medium' as const
   });
 
-  // Calendar constants and functions
+  // kalender
   const monthNames = [
     'January', 'February', 'March', 'April', 'May', 'June',
     'July', 'August', 'September', 'October', 'November', 'December'
@@ -86,12 +86,10 @@ const AdminDashboard: React.FC<AdminDashboardProps> = ({ user, announcements, on
 
     const days = [];
     
-    // Add empty cells for days before the first day of the month
     for (let i = 0; i < startingDayOfWeek; i++) {
       days.push(null);
     }
     
-    // Add days of the month
     for (let day = 1; day <= daysInMonth; day++) {
       days.push(day);
     }
@@ -110,7 +108,6 @@ const AdminDashboard: React.FC<AdminDashboardProps> = ({ user, announcements, on
            today.getFullYear() === currentDate.getFullYear();
   };
 
-  // Announcement helper functions
   const getAnnouncementIcon = (type: string) => {
     switch (type) {
       case 'warning':
@@ -191,7 +188,7 @@ const AdminDashboard: React.FC<AdminDashboardProps> = ({ user, announcements, on
     }
   };
 
-  // Mock data for admin dashboards
+  // Mock data
   const academicStats = {
     totalStudents: 1247,
     activeCourses: 156,
@@ -337,7 +334,7 @@ const AdminDashboard: React.FC<AdminDashboardProps> = ({ user, announcements, on
         </div>
       </div>
 
-      {/* Recent Academic Activities */}
+      {/* Recent academic act */}
       <div className="bg-white rounded-xl border border-gray-200 p-6">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Academic Activities</h3>
         <div className="space-y-4">
